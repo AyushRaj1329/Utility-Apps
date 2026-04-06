@@ -40,7 +40,7 @@ function Stopwatch() {
     };
 
     return (
-        <div className="flex flex-col items-center gap-4 bg-cyan-200 w-80 px-4 py-4 rounded-2xl">
+        <div className="flex flex-col items-center gap-4 bg-[#F6DBDB] w-80 px-4 py-4 rounded-2xl">
 
             <h1 className="text-4xl font-bold">{formatTime()}</h1>
 

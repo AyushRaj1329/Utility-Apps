@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar' 
 import Stopwatch from './components/Stopwatch';
+import Timer from './components/Timer';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         return <div className="h-screen flex items-center justify-center "><Stopwatch/></div> ;
         
       case "timer":
-        return <h1>Timer</h1>;
+        return <div className="h-screen flex items-center justify-center "><Timer/></div> ;
       case "todo":
         return <h1>To Do</h1>;
       case "calculator":
