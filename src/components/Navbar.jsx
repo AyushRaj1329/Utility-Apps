@@ -20,8 +20,8 @@ function Navbar({ active, setActive }) {
                 </button>
 
                 <button 
-                onClick={()=>setActive("world-clock")}
-                className={`px-4 rounded whitespace-nowrap ${active==="world-clock"? "bg-[#C2EEC7] text-[#38b538]" : "bg-gray-700"}`}>
+                onClick={()=>setActive("worldclock")}
+                className={`px-4 rounded whitespace-nowrap ${active==="worldclock"? "bg-[#C2EEC7] text-[#38b538]" : "bg-gray-700"}`}>
                     World Clock
                 </button>
 

@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar' 
 import Stopwatch from './components/Stopwatch';
 import Timer from './components/Timer';
+import WorldClock from './components/WorldClock' 
 
 
 function App() {
@@ -15,8 +16,11 @@ function App() {
         
       case "timer":
         return <div className="h-screen flex items-center justify-center "><Timer/></div> ;
-      case "todo":
-        return <h1>To Do</h1>;
+
+      case "worldclock":
+        return <div className="h-screen flex items-center justify-center "><WorldClock/></div> ;
+
+
       case "calculator":
         return <h1>Calculator</h1>;
       default:
