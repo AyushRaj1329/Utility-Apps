@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import beepsound from "../assets/beep.mp3"
 
 function Timer() {
     const [time, setTime] = useState(60);
@@ -23,8 +24,9 @@ function Timer() {
         }
 
         if (time === 0 && isRunning) {
+            const audio=new Audio(beepsound);
             setIsRunning(false);
-            alert("Time's UP !!!");
+            audio.play();
         }
 
         return () => clearInterval(interval);
