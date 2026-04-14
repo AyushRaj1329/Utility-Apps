@@ -1,1 +1,8 @@
 @import "tailwindcss";
+.btn {
+  @apply bg-amber-50 rounded-2xl p-3 hover:bg-amber-200 active:scale-95 transition;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

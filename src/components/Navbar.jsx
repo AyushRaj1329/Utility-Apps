@@ -1,9 +1,35 @@
-import React from 'react'
-import { useState } from "react";
+import React, { useEffect } from 'react'
+import { useState,useRef } from "react";
 
 function Navbar({ active, setActive }) {
+
+    const navRef=useRef(null);
+
+    useEffect(()=>{
+        const nav=navRef.current;
+        if (!nav) return;
+
+        const handleWheel=(e)=>{
+            if(e.deltaY!==0){
+                e.preventDefault();
+                nav.scrollLeft+=e.deltaY;
+            }
+        };
+
+        nav.addEventListener("wheel",handleWheel, { passive: false });
+        
+
+        return()=>{
+            nav.removeEventListener("wheel",handleWheel);
+        }
+    },[]);
+
+
+
     return (
-        <nav className='w-full bg-gray-900 text-white py-3 px-2 overflow-x-auto '>
+        <nav
+        ref={navRef}
+         className='w-full bg-gray-900 text-white py-3 px-2 overflow-x-auto whitespace-nowrap hover:bg-gray-800 scroll-smooth'>
             <div className="flex gap-4 min-w-max">
                 <button
                     onClick={() => setActive("stopwatch")}
@@ -30,6 +56,16 @@ function Navbar({ active, setActive }) {
                 className={`px-4 rounded whitespace-nowrap ${active==="calculator"? "bg-[#AFEEEE] text-[#008cff]" : "bg-gray-700"}`}>
                     Calculator
                 </button>
+
+
+
+
+
+
+
+
+
+
 
                 <button 
                 onClick={()=>setActive("to-do-list")}
