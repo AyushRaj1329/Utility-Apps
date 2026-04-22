@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useState,useRef } from "react";
+import {useRef } from "react";
 
 function Navbar({ active, setActive }) {
 
@@ -57,6 +57,17 @@ function Navbar({ active, setActive }) {
                     Calculator
                 </button>
 
+                <button 
+                onClick={()=>setActive("passwordgenerator")}
+                className={`px-4 rounded whitespace-nowrap ${active==="passwordgenerator"? "bg-[#cdc1ff] text-[#7371fc]" : "bg-gray-700"}`}>
+                    PasswordGenerator
+                </button>
+
+                 <button 
+                onClick={()=>setActive("qrgenerator")}
+                className={`px-4 rounded whitespace-nowrap ${active==="qrgenerator"? "bg-[#AFEEEE] text-[#008cff]" : "bg-gray-700"}`}>
+                    QRGenerator
+                </button>
 
 
 
@@ -85,11 +96,6 @@ function Navbar({ active, setActive }) {
                     Reminder
                 </button>
 
-                <button 
-                onClick={()=>setActive("password-generator")}
-                className={`px-4 rounded whitespace-nowrap ${active==="password-generator"? "bg-[#AFEEEE] text-[#008cff]" : "bg-gray-700"}`}>
-                    Password Generator
-                </button>
 
                 <button 
                 onClick={()=>setActive("weather")}
