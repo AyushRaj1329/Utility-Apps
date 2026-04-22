@@ -7,6 +7,7 @@ import WorldClock from "./components/WorldClock";
 import Calculator from "./components/Calculator";
 import PasswordGenerator from "./components/PasswordGenerator";
 import { QRGenerator } from "./components/QRGenerator";
+import { ImageToQR } from "./components/ImageToQR";
 
 function App() {
   const [active, setActive] = useState("stopwatch");
@@ -54,7 +55,12 @@ function App() {
             <QRGenerator/>
           </div>
         );
-
+         case "imagetoqr":
+        return (
+          <div className="h-screen flex items-center justify-center ">
+            <ImageToQR/>
+          </div>
+        );
 
 
 

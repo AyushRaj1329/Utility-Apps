@@ -65,8 +65,14 @@ function Navbar({ active, setActive }) {
 
                  <button 
                 onClick={()=>setActive("qrgenerator")}
-                className={`px-4 rounded whitespace-nowrap ${active==="qrgenerator"? "bg-[#AFEEEE] text-[#008cff]" : "bg-gray-700"}`}>
+                className={`px-4 rounded whitespace-nowrap ${active==="qrgenerator"? "bg-[#99AD7A] text-[#546B41]" : "bg-gray-700"}`}>
                     QRGenerator
+                </button>
+
+                 <button 
+                onClick={()=>setActive("imagetoqr")}
+                className={`px-4 rounded whitespace-nowrap ${active==="imagetoqr"? "bg-[#AFEEEE] text-[#008cff]" : "bg-gray-700"}`}>
+                    ImageToQR
                 </button>
 
 
